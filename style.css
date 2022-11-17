@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(10, 68, 107, .9);
+    /* background: url(./ai/bg.jpg) no-repeat top/cover; */
+    background-size: 100vw;
+    margin: 0;
+
+}
+
+.a {
+    position: relative;
+    top: 100px;
+    width: 1000px;
+    height: 600px;
+    background-image: url(./ai/bg-01.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.b,
+.c,
+.d,
+.e {
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, .5));
+    /* background-size: cover; */
+    opacity: .7;
+    transition: 1.5s;
+}
+
+.b::after,
+.c::after,
+.d::after,
+.e::after {
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    background-color: #0E4E7A;
+    background-image: url(./ai/bg.jpg);
+}
+
+.b {
+    width: 1000px;
+    left: -600px;
+    transform: rotateZ(100deg);
+    overflow: hidden;
+}
+
+.b::after {
+    transform: rotateZ(-100deg);
+}
+
+.c {
+    width: 1000px;
+    left: -600px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+}
+
+.c::after {
+    transform: rotateZ(100deg);
+}
+
+.d {
+    width: 1000px;
+    right: -600px;
+    transform: rotateZ(100deg);
+    overflow: hidden;
+}
+
+.d::after {
+    transform: rotateZ(-100deg);
+}
+
+.e {
+    width: 1000px;
+    right: -600px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+}
+
+.e::after {
+    transform: rotateZ(100deg);
+}
+
+.f {
+    width: 1000px;
+    text-align: center;
+    opacity: 0;
+    font: 900 45px '';
+    letter-spacing: 10px;
+    color: rgb(60, 60, 70);
+    transition: 1.5s;
+}
+
+.a:hover {
+    background-image: url(./ai/bg-04.png);
+    transition: 1s;
+}
+
+
+
+
+.a:hover .b {
+    left: -870px;
+}
+
+.a:hover .c {
+    left: -1010px;
+}
+
+.a:hover .d {
+    right: -860px;
+}
+
+.a:hover .e {
+    right: -1010px;
+}
+
+.a:hover .f {
+    opacity: 1;
+}
+
+table {
+    table-layout: fixed;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    /* border-collapse: collapse; */
+    border-spacing: 6px;
+    /* border-radius: 10px; */
+    border: 0;
+    word-break: break-all;
+    cursor: pointer;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+table td {
+    border-radius: 10px;
+    border: 0;
+    background-color: rgba(250, 235, 215, .7);
+    text-align: center;
+    color: rgb(126, 10, 10);
+}
